@@ -1,0 +1,133 @@
+what is version control?
+what are version control system?
+why to use version control?
+
+the changes we made in the copy of the original file is
+known as version control.(like taking the backup of the original file and create some changes in the current file and save it)
+long term change history
+branching
+trackable
+secure
+flexibilty
+
+Git
+git is distributed Version control system
+stores repo locally
+limited needs of network
+bAased on Hash Algorithem
+
+GitHub
+Web-based hosting services for Git repository to facilitate team work
+gui platform made for developers around world
+open source and codes are storeds in huge centralized server
+
+Git Basics steps
+yum isntall git
+git config -l
+git config --global user.name "v-vashisht"
+git config --global user.emal "username@gmail.com"
+git config -l
+#git config --system core.editor vim
+git status
+we can use status as st
+git config --global alias.st "status"
+git st
+ 
+types of git workflow
+centralized Repo:
+The Centralized Workflow is a great Git workflow for teams transitioning from SVN. Like Subversion, the Centralized Workflow uses a central repository to serve as the single point-of-entry for all changes to the project. Instead of trunk, the default development branch is called main and all changes are committed into this branch. This workflow doesn’t require any other branches besides main.
+
+Feature Branch Workflow : 
+In feature branch work flow all changes were applied in a dedicated branch instead of the main branch, the encapsulation make it easy for developer to work on particular feature without disturbing master branch
+
+git flow workflow:
+It assigns very specific riles to different branches and defines how and when they should interact.
+
+Forking workflow:
+The Forking Workflow is fundamentally different than other popular Git workflows. Instead of using a single server-side repository to act as the “central” codebase, it gives every developer their own server-side repository. This means that each contributor has not one, but two Git repositories: a private local one and a public server-side one. The Forking Workflow is most often seen in public open source projects.
+
+
+create local repos
+push repo
+track file changes
+staging changes
+undo changes
+revert changes
+
+create local repos
+git init 
+ls -al
+git add firstfile
+git status
+git log 
+git checkout filename
+git checkout -f
+git secondfile
+git add .
+git commit -m "Fistfile and secondfile"
+git remote add origin "git url"
+git push -u origin master
+now create new file from git hub
+git pull 
+ls 
+git log
+if we add new changes 
+git add .
+git commit -m "newchanges"
+git push -u origin master
+git log
+git revert "hashnumber"
+git add.
+git commit -m "revert changes"
+git push -u origin master
+mv firstfile secondfile
+git push origin master
+touch file.jpg
+touch file2.jpg
+vim .gitignore
+*.jpg
+
+remote repo - local repo needed for sharing data
+local repo has a remote repo
+
+creating a repositories with http
+$ git clone <https url>
+
+#differ b/w forking and pulling
+forking - creating your own copy ispolated from the original file
+pulling - having a local copy of the original project while staying connected to it and able to pull new updates
+
+upsteam: from where you clone the repository
+downstream: any project that instegrate your work
+
+create a repo in github using htttps/ssh
+create a fork and pull request
+pulling commits from github
+collaborting b/w local and remote repo
+managing multiples commit in git
+merging file changes in git
+creating and traking issues 
+getting started with git upstream
+create and delete tags
+
+commands to create branch
+git branch branchname
+#Switched to branch 'feature1'
+git checkout branchname
+git merge branchname
+git checkout -b branchname
+
+
+#how to make a clone for the repo from https and ssh
+git clone http:url
+cd ~/.ssh
+generate ssh key
+ssh-keygen
+copy ssh_rsa.pub key after that go to console open ssh and gpg keys
+add the ssh keys by pasting the key
+click on clone - copy the url
+then pasted it to cli side as git clone .....
+then add password
+
+
+
